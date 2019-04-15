@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Chapter 3 Criterias of a Good Visualization | MSIS 2629 Self-study Project</title>
+  <title>Chapter 5 Evaluation Framework | MSIS 2629 Self-study Project</title>
   <meta name="description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Chapter 3 Criterias of a Good Visualization | MSIS 2629 Self-study Project" />
+  <meta property="og:title" content="Chapter 5 Evaluation Framework | MSIS 2629 Self-study Project" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   <meta name="github-repo" content="rlwy/climate-change-visualization" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Criterias of a Good Visualization | MSIS 2629 Self-study Project" />
+  <meta name="twitter:title" content="Chapter 5 Evaluation Framework | MSIS 2629 Self-study Project" />
   
   <meta name="twitter:description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="types-of-visualization.html">
-<link rel="next" href="evaluation.html">
+<link rel="prev" href="evaluation.html">
+<link rel="next" href="use-case.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -99,6 +99,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="part"><span><b>Part I Data Visualization</b></span></li>
 <li class="chapter" data-level="1" data-path="what-is-visualization-and-why-do-we-visualize-data.html"><a href="what-is-visualization-and-why-do-we-visualize-data.html"><i class="fa fa-check"></i><b>1</b> What is Visualization and Why Do We Visualize Data?</a></li>
 <li class="chapter" data-level="2" data-path="types-of-visualization.html"><a href="types-of-visualization.html"><i class="fa fa-check"></i><b>2</b> Types of visualization</a><ul>
@@ -154,103 +155,35 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="criterias-of-a-good-visualization" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Criterias of a Good Visualization</h1>
-<div id="the-human-brain-and-sight" class="section level2">
-<h2><span class="header-section-number">3.1</span> The Human Brain and Sight</h2>
-<p>Did you know that the human brain can process entire images that the eye sees for as little as 13 milliseconds? Vision begins with light passing through the cornea and the lens, which combine to produce a clear image of the visual world on our retina. Information from the retina is then sent via the optic nerve to the brain, which process the image and allow us to see.</p>
-<p>With our brains processing the things we see at such great speed, how then do we capture the viewer’s attention to focus, understand and remember the data?</p>
-</div>
-<div id="preattentive-attributes" class="section level2">
-<h2><span class="header-section-number">3.2</span> Preattentive Attributes</h2>
-<p>Preattentive attributes or properties are visual properties that are processed in spatial memory without our conscious action. These properties can be harnessed to make it easier for a user to understand what is presented through the design and save them from consciously processing all the data presented in short-term memory which requires more effort <span class="citation">(“Preattentive Visual Properties and How to Use Them in Information Visualization” <a href="#ref-IDF">2018</a>)</span>.</p>
-<p>There are 4 preattentive attributes:</p>
+<div id="evaluation-framework" class="section level1">
+<h1><span class="header-section-number">Chapter 5</span> Evaluation Framework</h1>
+<p>Using the above discussed attributes, we come up with a simple framework to evaluate visualizations. The criterias covered are as follows:</p>
 <ol style="list-style-type: decimal">
-<li>Color</li>
-<li>Form</li>
-<li>Movement</li>
-<li>Spatial Positioning</li>
+<li>Suitable type of visualization used for the topic</li>
+<li>Use of colors to draw attention</li>
+<li>Use of colors/shapes/patterns to differentiate between elements</li>
+<li>Labeled axis, with clear units</li>
+<li>Title to indicate the topic</li>
+<li>Proper use of white space between elements</li>
+<li>Contains dataset covers duration sufficient to justify change in pattern</li>
+<li>Movement/Animation to draw attention</li>
+<li>Describes the topic discussed</li>
+<li>Integrity of data</li>
+<li>Presents insights/prediction on data</li>
+<li>Clearness (quality) of visualization</li>
 </ol>
-<div id="color" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Color</h3>
-<p>Hues and intensities are preattentively processed and can be used to separate visual elements from their surroundings. This helps the user to identify key points in the data at first glance, saving them from having to perform a visual search through data.</p>
-<center>
-<div class="figure"><span id="fig:unnamed-chunk-8"></span>
-<img src="images/color.png" alt="(Author/Copyright holder: SharkD. Copyright terms and licence: CC BY-SA 3.0)" width="50%" />
-<p class="caption">
-Figure 3.1: (Author/Copyright holder: SharkD. Copyright terms and licence: CC BY-SA 3.0)
-</p>
-</div>
-</center>
-</div>
-<div id="form" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Form</h3>
-<p>Form applies to a set of attributes (listed below) and form can be manipulated to either call attention to a member of the data set or to reduce our attention on it. For example, if you were to manipulate the size of an object you could use that size to indicate its importance in a data set by making it larger. Conversely you could make it smaller and reduce its importance.</p>
-<p>Form attributes include:</p>
-<ul>
-<li>Collinearity</li>
-<li>Curvature</li>
-<li>Length, breadth and width</li>
-<li>Marks added to objects</li>
-<li>Numerosity</li>
-<li>Shape</li>
-<li>Size</li>
-<li>Spatial grouping</li>
-<li>Spatial orientation</li>
-</ul>
-<center>
-<div class="figure"><span id="fig:unnamed-chunk-9"></span>
-<img src="images/form.jpg" alt="Source: https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization" width="50%" />
-<p class="caption">
-Figure 3.2: Source: <a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization" class="uri">https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization</a>
-</p>
-</div>
-</center>
-<p>In the image above you can see how each form property can be used to call attention to a part of a visualization; you might not realize it but you didn’t even have to think to see these differences – it was all done in your sensory memory without conscious effort.</p>
-</div>
-<div id="movement" class="section level3">
-<h3><span class="header-section-number">3.2.3</span> Movement</h3>
-<p>Movement has two sub-attributes flicker and motion. They can be used very effectively to call someone’s attention. However, care should always be taken when employing motion in information visualizations and other designs. This is because the motion can rapidly become annoying or distracting from the rest of the information that is being presented. It’s also a technique which has been over-employed in banner adverts and other forms of web advertising over the years and may be a primary reason for the rise of ad-blocking software.</p>
-<center>
-<div class="figure"><span id="fig:unnamed-chunk-10"></span>
-<img src="images/movement.gif" alt="Source: https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization (Author/Copyright holder: P.Ctnt. Copyright terms and licence: Public Domain.)" width="50%" />
-<p class="caption">
-Figure 3.3: Source: <a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization" class="uri">https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization</a> (Author/Copyright holder: P.Ctnt. Copyright terms and licence: Public Domain.)
-</p>
-</div>
-</center>
-<p>The central traffic light in this GIF flickers to call the user’s attention to the yellow light rather than the red light or green arrow.</p>
-</div>
-<div id="spatial-positioning" class="section level3">
-<h3><span class="header-section-number">3.2.4</span> Spatial Positioning</h3>
-<p>There are several considerations for spatial positioning including:</p>
-<ul>
-<li>2D positioning – this is often the best way to deliver data that can be easily recognized and processed visually. It is particularly effective for quantitative data representations.</li>
-<li>Stereoscopic depth - we perceive depth by combining the images generated by the left and right eyes in the brain. This depth is preattentively processed. It is possible to recreate stereoscopic depth using two separate cameras set at different angles to a subject and imposing the images over each other.</li>
-<li>Concave and convex positioning – this can be created through the use of shading.</li>
-</ul>
-<center>
-<img src="images/spatial.jpg" alt="Author/Copyright holder: Pixabay. Copyright terms and licence: Free to Use" width="400" />
-</center>
-<p>In this image we can see the use of shading to suggest convex/concave properties. These are then preattentively processed in the brain.<br />
-Now that we know what makes a good visualization, let’s have a look at some data visualization on climate change causes and evaluate their effectiveness of using preattentive attributes.</p>
 <p style="page-break-before: always">
 </div>
-</div>
-</div>
-<h3> References</h3>
-<div id="refs" class="references">
-<div id="ref-IDF">
-<p>“Preattentive Visual Properties and How to Use Them in Information Visualization.” 2018. <a href="https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization" class="uri">https://www.interaction-design.org/literature/article/preattentive-visual-properties-and-how-to-use-them-in-information-visualization</a>.</p>
-</div>
-</div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="types-of-visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="evaluation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="evaluation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="use-case.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

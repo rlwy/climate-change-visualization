@@ -1,6 +1,8 @@
 bookdown::gitbook:
   config:
     toc:
+      collapse: subsection
+      scroll_highlight: yes
       before: |
         <li><a href="./">MSIS 2629 Self-Study Project</a></li>
       after: |

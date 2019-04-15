@@ -1,7 +1,7 @@
 ---
 title: "MSIS 2629 Self-study Project"
 author: "Rachel Lee"
-date: "4/9/2019"
+date: "4/14/2019"
 output:
   html_document:
     fig_caption: yes
@@ -23,3 +23,5 @@ github-repo: rlwy/climate-change-visualization
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Preface {-}
+This book showcases the work for MSIS 2629 Self-study project by Rachel Lee.
