@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 6 Use Case | MSIS 2629 Self-study Project</title>
+  <meta name="description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 6 Use Case | MSIS 2629 Self-study Project" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee" />
+  <meta name="github-repo" content="rlwy/climate-change-visualization" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Use Case | MSIS 2629 Self-study Project" />
+  
+  <meta name="twitter:description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee" />
+  
+
+<meta name="author" content="Rachel Lee">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="evaluation-framework.html">
+<link rel="next" href="conclusion.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="part"><span><b>Part I Data Visualization</b></span></li>
+<li class="chapter" data-level="1" data-path="what-is-visualization-and-why-do-we-visualize-data.html"><a href="what-is-visualization-and-why-do-we-visualize-data.html"><i class="fa fa-check"></i><b>1</b> What is Visualization and Why Do We Visualize Data?</a></li>
+<li class="chapter" data-level="2" data-path="types-of-visualization.html"><a href="types-of-visualization.html"><i class="fa fa-check"></i><b>2</b> Types of visualization</a><ul>
+<li class="chapter" data-level="2.1" data-path="types-of-visualization.html"><a href="types-of-visualization.html#charts"><i class="fa fa-check"></i><b>2.1</b> Charts</a></li>
+<li class="chapter" data-level="2.2" data-path="types-of-visualization.html"><a href="types-of-visualization.html#tables"><i class="fa fa-check"></i><b>2.2</b> Tables</a></li>
+<li class="chapter" data-level="2.3" data-path="types-of-visualization.html"><a href="types-of-visualization.html#graphs"><i class="fa fa-check"></i><b>2.3</b> Graphs</a></li>
+<li class="chapter" data-level="2.4" data-path="types-of-visualization.html"><a href="types-of-visualization.html#maps"><i class="fa fa-check"></i><b>2.4</b> Maps</a></li>
+<li class="chapter" data-level="2.5" data-path="types-of-visualization.html"><a href="types-of-visualization.html#infographics"><i class="fa fa-check"></i><b>2.5</b> Infographics</a></li>
+<li class="chapter" data-level="2.6" data-path="types-of-visualization.html"><a href="types-of-visualization.html#dashboards"><i class="fa fa-check"></i><b>2.6</b> Dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html"><i class="fa fa-check"></i><b>3</b> Criterias of a Good Visualization</a><ul>
+<li class="chapter" data-level="3.1" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#the-human-brain-and-sight"><i class="fa fa-check"></i><b>3.1</b> The Human Brain and Sight</a></li>
+<li class="chapter" data-level="3.2" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#preattentive-attributes"><i class="fa fa-check"></i><b>3.2</b> Preattentive Attributes</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#color"><i class="fa fa-check"></i><b>3.2.1</b> Color</a></li>
+<li class="chapter" data-level="3.2.2" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#form"><i class="fa fa-check"></i><b>3.2.2</b> Form</a></li>
+<li class="chapter" data-level="3.2.3" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#movement"><i class="fa fa-check"></i><b>3.2.3</b> Movement</a></li>
+<li class="chapter" data-level="3.2.4" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#spatial-positioning"><i class="fa fa-check"></i><b>3.2.4</b> Spatial Positioning</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="evaluation.html"><a href="evaluation.html"><i class="fa fa-check"></i><b>4</b> Evaluation</a><ul>
+<li class="chapter" data-level="4.1" data-path="evaluation.html"><a href="evaluation.html#relevancy"><i class="fa fa-check"></i><b>4.1</b> Relevancy</a></li>
+<li class="chapter" data-level="4.2" data-path="evaluation.html"><a href="evaluation.html#interpretability"><i class="fa fa-check"></i><b>4.2</b> Interpretability</a></li>
+<li class="chapter" data-level="4.3" data-path="evaluation.html"><a href="evaluation.html#simplicity"><i class="fa fa-check"></i><b>4.3</b> Simplicity</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="evaluation-framework.html"><a href="evaluation-framework.html"><i class="fa fa-check"></i><b>5</b> Evaluation Framework</a></li>
+<li class="part"><span><b>Part II Climate Change Caused by Human Activity</b></span></li>
+<li class="chapter" data-level="6" data-path="use-case.html"><a href="use-case.html"><i class="fa fa-check"></i><b>6</b> Use Case</a><ul>
+<li class="chapter" data-level="6.1" data-path="use-case.html"><a href="use-case.html#what-is-climate"><i class="fa fa-check"></i><b>6.1</b> What is Climate?</a></li>
+<li class="chapter" data-level="6.2" data-path="use-case.html"><a href="use-case.html#climate-change"><i class="fa fa-check"></i><b>6.2</b> Climate Change</a></li>
+<li class="chapter" data-level="6.3" data-path="use-case.html"><a href="use-case.html#causes-of-climate-change"><i class="fa fa-check"></i><b>6.3</b> Causes of Climate Change</a></li>
+<li class="chapter" data-level="6.4" data-path="use-case.html"><a href="use-case.html#evaluation-metrics"><i class="fa fa-check"></i><b>6.4</b> Evaluation Metrics</a></li>
+<li class="chapter" data-level="6.5" data-path="use-case.html"><a href="use-case.html#assessment"><i class="fa fa-check"></i><b>6.5</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> conclusion</a></li>
+<li class="part"><span><b>Part III Warming Stripes</b></span></li>
+<li class="chapter" data-level="8" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>8</b> Introduction</a></li>
+<li class="chapter" data-level="9" data-path="generating-the-visualization.html"><a href="generating-the-visualization.html"><i class="fa fa-check"></i><b>9</b> Generating the visualization</a></li>
+<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MSIS 2629 Self-study Project</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="use-case" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Use Case</h1>
+<p>To test the evaluation framework, we use 5 visualization relating to climate change causes.</p>
+<p>Before we begin looking at the data visualization. Let’s learn on what is climate and how is it changing? What are the effects of it and what causes these changes.</p>
+<div id="what-is-climate" class="section level2">
+<h2><span class="header-section-number">6.1</span> What is Climate?</h2>
+<p>Climate describes conditions over the long term and over an entire region. <span class="citation">(“Climate,” n.d.)</span></p>
+</div>
+<div id="climate-change" class="section level2">
+<h2><span class="header-section-number">6.2</span> Climate Change</h2>
+<p>Global climate is changing rapidly compared to the pace of natural variations in climate that have occurred throughout Earth’s history. Global average temperature has increased by about 1.8°F from 1901 to 2016, and observational evidence does not support any credible natural explanations for this amount of warming; instead, the evidence consistently points to human activities, especially emissions of greenhouse or heat-trapping gases, as the dominant cause.<span class="citation">(Doherty S., n.d.)</span></p>
+</div>
+<div id="causes-of-climate-change" class="section level2">
+<h2><span class="header-section-number">6.3</span> Causes of Climate Change</h2>
+<p>Climate change can be caused by human activities and nature.</p>
+<p>Here we take a look at 5 visualization that shows the causes of climate change.</p>
+<center>
+<strong>Visualization 1</strong>
+<div class="figure"><span id="fig:unnamed-chunk-11"></span>
+<img src="images/bloomberg%20-%20human%20factors.png" alt="Source: https://www.bloomberg.com/graphics/2015-whats-warming-the-world/" width="80%" />
+<p class="caption">
+Figure 6.1: Source: <a href="https://www.bloomberg.com/graphics/2015-whats-warming-the-world/" class="uri">https://www.bloomberg.com/graphics/2015-whats-warming-the-world/</a>
+</p>
+</div>
+<strong>Visualization 2</strong><br />
+
+<div class="figure"><span id="fig:unnamed-chunk-12"></span>
+<img src="images/human_contribution_to_atmospheric_co2.png" alt="Source: https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html" width="60%" />
+<p class="caption">
+Figure 6.2: Source: <a href="https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html" class="uri">https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html</a>
+</p>
+</div>
+<strong>Visualization 3</strong><br />
+
+<div class="figure"><span id="fig:unnamed-chunk-13"></span>
+<img src="images/human_activity_climate_change.png" alt="Source: https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html" width="60%" />
+<p class="caption">
+Figure 6.3: Source: <a href="https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html" class="uri">https://www.ucsusa.org/global-warming/science-and-impacts/science/human-contribution-to-gw-faq.html</a>
+</p>
+</div>
+<strong>Visualization 4</strong><br />
+
+<div class="figure"><span id="fig:unnamed-chunk-14"></span>
+<img src="images/WMO-temperature_changes.png" alt="Source: http://www.bom.gov.au/state-of-the-climate/2016/" width="60%" />
+<p class="caption">
+Figure 6.4: Source: <a href="http://www.bom.gov.au/state-of-the-climate/2016/" class="uri">http://www.bom.gov.au/state-of-the-climate/2016/</a>
+</p>
+</div>
+<strong>Visualization 5</strong><br />
+
+<div class="figure"><span id="fig:unnamed-chunk-15"></span>
+<img src="images/Solar_Attribution_1024_med.jpg" alt="Source: https://www.skepticalscience.com/graphics.php?g=58" width="60%" />
+<p class="caption">
+Figure 6.5: Source: <a href="https://www.skepticalscience.com/graphics.php?g=58" class="uri">https://www.skepticalscience.com/graphics.php?g=58</a>
+</p>
+</div>
+</center>
+<p style="page-break-before: always">
+</div>
+<div id="evaluation-metrics" class="section level2">
+<h2><span class="header-section-number">6.4</span> Evaluation Metrics</h2>
+<p>Using the evaluation framework described, we evaluate each of the visualization.</p>
+<p>For each criteria listed, we give a point if the visualization meets the criteria</p>
+<table style="width:100%;">
+<colgroup>
+<col width="3%" />
+<col width="30%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Criteria</strong></th>
+<th><strong>Visual 1</strong></th>
+<th><strong>Visual 2</strong></th>
+<th><strong>Visual 3</strong></th>
+<th><strong>Visual 4</strong></th>
+<th><strong>Visual 5</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Suitable type of visualization used for the topic</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Use of colors to draw attention</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Use of colors/shapes/patterns to differentiate between elements</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>4.</td>
+<td>Labeled axis, with clear units</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>5.</td>
+<td>Title to indicate the topic</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>6.</td>
+<td>Proper use of white space between elements</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>7.</td>
+<td>Contains dataset covers duration sufficient to justify change in pattern (&gt; 10 years)</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>8.</td>
+<td>Movement/Animation to draw attention</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>9.</td>
+<td>Describes the topic discussed</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>10.</td>
+<td>Integrity of data (data provided by valid sources)</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>11.</td>
+<td>Presents insights/prediction on the future/data</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>12.</td>
+<td>Clearness (quality) of visualization</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Total Score</td>
+<td>11</td>
+<td>10</td>
+<td>9</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="assessment" class="section level2">
+<h2><span class="header-section-number">6.5</span> Assessment</h2>
+<p>All five visualization agrees that earth’s climate is changing and the at the average temperature is increasing each year.</p>
+<p><strong>Visualization 1</strong>: Shows that greenhouses gasses emitted from human activities are the largest contributor to the increasing temperatures. While aerosol and land-use reduces the temperature. The line graph used is clear in presenting the information as it uses different colors and labels to identify each cause. While there are no ticks for years on the x-axis, it shows that the years observed ranges between 1880 - 2004 and a hover over the lines would show its exact year value for the point of hover.</p>
+<p><strong>Visualization 2</strong>: Shows the increase in carbon dioxide concentration in our atmosphere each year, causing the earth’s rise in temperature. The different hue of red from light to dark is used to emphasize increasing CO2 levels from fair to worst as each year passes.</p>
+<p><strong>Visualization 3</strong>: Shows the distribution of human activities comparing to natural forcings that contributed to climate change. From the boxplot, we can easily tell the outliers and distribution, however, it does not provide the numbers to show it’s impact.</p>
+<p><strong>Visualization 4</strong>: Shows that a change in temperature anomaly happened after 1975, where a La Nina year is now warmer than El Nino years in prior 1960. The bar chart uses different colors to indicate the different natural phenomenons distinctly.</p>
+<p><strong>Visualization 5</strong>: Shows the percentage contribution of solar variability to global warming for 2 time periods, the past 100-150 years (left) and the past 50-65 years (right), from various peer-reviewed studies. From the graph, it is apparent that solar activity percentage contribution has greatly reduced in the past 50-65 years, although the overall global warming is increasing - indicating that human activities contribituon have grown larger in proportionate and will likely to continue so in the next 50 years. Unfortunately, the image quality is poor for the visualization and hence, cannot capture the reader’s attention well. Moreover, if we compare the colors palette being used between visualization 4 and 5, we can see that visualization 4 does a better job at contrasting the different elements and increase overall appeal to the reader.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="evaluation-framework.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="conclusion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

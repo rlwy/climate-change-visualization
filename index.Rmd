@@ -1,0 +1,25 @@
+---
+title: "MSIS 2629 Self-study Project"
+author: "Rachel Lee"
+date: "4/9/2019"
+output:
+  html_document:
+    fig_caption: yes
+    toc: yes
+    toc_depth: 2
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+bibliography: [references.bib]
+biblio-style: apalike
+link-citations: yes
+nocite: '@*'
+colorlinks: yes
+fontsize: 12pt
+description: "Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee"
+github-repo: rlwy/climate-change-visualization
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

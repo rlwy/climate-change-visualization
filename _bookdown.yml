@@ -1,0 +1,6 @@
+book_filename: "msis-2629-self-study-project"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+output_dir: output

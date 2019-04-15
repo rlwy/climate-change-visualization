@@ -1,0 +1,117 @@
+---
+title: "Warming Stripes - Tropics Annual"
+author: "Rachel Lee"
+date: "4/10/2019"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# (PART\*) Part III Warming Stripes {-} 
+
+This section is the second part to the self-study project.
+
+# Introduction
+This project is to produce a warming stripes visualization, first released by Ed Hawkins, a climate scientist in the National Centre for Atmospheric Science (NCAS) at the University of Reading in 2018.
+
+For this project, we use the data relesed by the UK Met Office. We selected the Tropics (30 deg S to 30 deg N) Annual dataset, which contains a time series presented as temperature anomalies (deg C) that are relative to 1961-1990 for the years 1850 to 2019.  
+
+The dataset consists of 170 records with 12 columns as described below:  
+
+1.  Column 1 is the date.
+2.  Column 2 is the median of the 100 ensemble member time series.
+3.  Columns 3 and 4 are the lower and upper bounds of the 95% confidence interval of bias uncertainty computed from the 100 member ensemble.
+4.  Columns 5 and 6 are the lower and upper bounds of the 95% confidence interval of measurement and sampling uncertainties around the ensemble median. These are the combination of fully uncorrelated measurement and sampling uncertainties and partially correlated uncertainties described by the HadCRUT4 error covariance matrices.
+5.  Columns 7 and 8 are the lower and upper bounds of the 95% confidence interval of coverage uncertainties around the ensemble median.
+6.  Columns 9 and 10 are the lower and upper bounds of the 95% confidence interval of the combination of measurement and sampling and bias uncertainties.
+7.  Columns 11 and 12 are the lower and upper bounds of the 95% confidence interval of the combined effects of all the uncertainties described in the HadCRUT4 error model (measurement and sampling, bias and coverage uncertainties).
+  
+The dataset can be downloaded from [here](https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/time_series/HadCRUT.4.6.0.0.annual_30S_30N.txt).  
+Information on the dataset format can be found [here](https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/ensemble_series_format.html).  
+
+More details are given in the [paper introducing the dataset](https://www.metoffice.gov.uk/hadobs/hadcrut4/HadCRUT4_accepted.pdf).  
+
+# Generating the visualization
+We first check to see if the necessary packages are loaded.
+```{r, warning=FALSE,message=FALSE}
+# check if the "tidyverse" and "lubridate" packages are installed
+if(!require("tidyverse")) install.packages("tidyverse")
+if(!require("lubridate")) install.packages("lubridate")
+
+# load libraries
+library(tidyverse)
+library(lubridate)
+library(RColorBrewer)
+```
+Then we import the dataset into the project file.
+``` {r, warning=FALSE, message=FALSE}
+# import tropics annual data
+tropics_annual <- read_csv("data/HadCRUT.4.6.0.0.annual_30S_30N.csv")
+# the above file was converted to csv from the original downloaded file "data/HadCRUT.4.6.0.0.annual_30S_30N.txt"
+
+# add header to the imported data based on the documentation
+names(tropics_annual) <- c("date", 
+                           "temp_anomaly",
+                           "lb_bias_uncertainty", "ub_bias_uncertainty", 
+                           "lb_measure_sample", "ub_measure_sample",
+                           "lb_coverage", "ub_coverage", 
+                           "lb_measure_sample_bias", "ub_measure_sample_bias", 
+                           "lb_comb_all", "ub_comb_all")
+```
+
+``` {r, echo=FALSE}
+# print the data
+#str(tropics_annual)
+```
+
+``` {r, warning=FALSE, message=FALSE}
+# select only the date and temperature anomaly values for creating our warming stripes visualization
+tropics_annual_yr <- select(tropics_annual, date, temp_anomaly)
+```
+```{r, echo=FALSE}
+# print the data
+#str(tropics_annual_yr)
+
+# Print summary of the data
+#summary(tropics_annual_yr)
+```
+
+```{r, warning=FALSE, message=FALSE}
+# convert date column to a date object
+tropics_annual_yr <- mutate(tropics_annual_yr,date=str_c(date,"01-01",sep="-")%>%ymd())
+```
+We define the theme for the plot, selecting the color palette. We also set the angle for the x-axis labels to be displaying vertically, at a 90 degrees angle.  
+``` {R, }
+# Define the theme for the output plot
+theme_strip <- theme_minimal()+
+                 theme(axis.text.y = element_blank(),
+                       axis.line.y = element_blank(),
+                       axis.title = element_blank(),
+                       panel.grid.major=element_blank(),
+                       legend.title = element_blank(),
+                       axis.text.x=element_text(angle=90, hjust = 1),
+                       panel.grid.minor=element_blank(),
+                        plot.title=element_text(size=14,face="bold", hjust = 0.5)
+                       )
+col_strip <- brewer.pal(11,"RdBu")
+#brewer.pal.info
+```
+Generate the plot and apply the theme to it. We set the scale for x-axis to be 5 years and only to display the Year value of the date.  
+```{R, fig.align='center',out.extra='angle=90'}
+# create the plot
+ggplot(tropics_annual_yr,
+             aes(x=date,y=1,fill=temp_anomaly))+
+        geom_tile()+
+           scale_x_date(date_breaks = "5 years",
+                     date_labels = "%Y",
+                     expand=c(0,0))+
+           scale_y_continuous(expand=c(0,0))+
+           scale_fill_gradientn(colors=rev(col_strip))+
+             guides(fill=guide_colorbar(barwidth = 1))+
+            labs(title="Tropics Annual Temperature Anomaly 1850 - 2019",
+                caption="Data source: https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/download.html")+
+              theme_strip
+```
+
+# References

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chapter 8 Introduction | MSIS 2629 Self-study Project</title>
+  <meta name="description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
+
+  <meta property="og:title" content="Chapter 8 Introduction | MSIS 2629 Self-study Project" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee" />
+  <meta name="github-repo" content="rlwy/climate-change-visualization" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Introduction | MSIS 2629 Self-study Project" />
+  
+  <meta name="twitter:description" content="Self-study homework submission for MSIS 2629 Dashboards, Scorecards and Visualization by Rachel Lee" />
+  
+
+<meta name="author" content="Rachel Lee">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="conclusion.html">
+<link rel="next" href="generating-the-visualization.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="part"><span><b>Part I Data Visualization</b></span></li>
+<li class="chapter" data-level="1" data-path="what-is-visualization-and-why-do-we-visualize-data.html"><a href="what-is-visualization-and-why-do-we-visualize-data.html"><i class="fa fa-check"></i><b>1</b> What is Visualization and Why Do We Visualize Data?</a></li>
+<li class="chapter" data-level="2" data-path="types-of-visualization.html"><a href="types-of-visualization.html"><i class="fa fa-check"></i><b>2</b> Types of visualization</a><ul>
+<li class="chapter" data-level="2.1" data-path="types-of-visualization.html"><a href="types-of-visualization.html#charts"><i class="fa fa-check"></i><b>2.1</b> Charts</a></li>
+<li class="chapter" data-level="2.2" data-path="types-of-visualization.html"><a href="types-of-visualization.html#tables"><i class="fa fa-check"></i><b>2.2</b> Tables</a></li>
+<li class="chapter" data-level="2.3" data-path="types-of-visualization.html"><a href="types-of-visualization.html#graphs"><i class="fa fa-check"></i><b>2.3</b> Graphs</a></li>
+<li class="chapter" data-level="2.4" data-path="types-of-visualization.html"><a href="types-of-visualization.html#maps"><i class="fa fa-check"></i><b>2.4</b> Maps</a></li>
+<li class="chapter" data-level="2.5" data-path="types-of-visualization.html"><a href="types-of-visualization.html#infographics"><i class="fa fa-check"></i><b>2.5</b> Infographics</a></li>
+<li class="chapter" data-level="2.6" data-path="types-of-visualization.html"><a href="types-of-visualization.html#dashboards"><i class="fa fa-check"></i><b>2.6</b> Dashboards</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html"><i class="fa fa-check"></i><b>3</b> Criterias of a Good Visualization</a><ul>
+<li class="chapter" data-level="3.1" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#the-human-brain-and-sight"><i class="fa fa-check"></i><b>3.1</b> The Human Brain and Sight</a></li>
+<li class="chapter" data-level="3.2" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#preattentive-attributes"><i class="fa fa-check"></i><b>3.2</b> Preattentive Attributes</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#color"><i class="fa fa-check"></i><b>3.2.1</b> Color</a></li>
+<li class="chapter" data-level="3.2.2" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#form"><i class="fa fa-check"></i><b>3.2.2</b> Form</a></li>
+<li class="chapter" data-level="3.2.3" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#movement"><i class="fa fa-check"></i><b>3.2.3</b> Movement</a></li>
+<li class="chapter" data-level="3.2.4" data-path="criterias-of-a-good-visualization.html"><a href="criterias-of-a-good-visualization.html#spatial-positioning"><i class="fa fa-check"></i><b>3.2.4</b> Spatial Positioning</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="evaluation.html"><a href="evaluation.html"><i class="fa fa-check"></i><b>4</b> Evaluation</a><ul>
+<li class="chapter" data-level="4.1" data-path="evaluation.html"><a href="evaluation.html#relevancy"><i class="fa fa-check"></i><b>4.1</b> Relevancy</a></li>
+<li class="chapter" data-level="4.2" data-path="evaluation.html"><a href="evaluation.html#interpretability"><i class="fa fa-check"></i><b>4.2</b> Interpretability</a></li>
+<li class="chapter" data-level="4.3" data-path="evaluation.html"><a href="evaluation.html#simplicity"><i class="fa fa-check"></i><b>4.3</b> Simplicity</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="evaluation-framework.html"><a href="evaluation-framework.html"><i class="fa fa-check"></i><b>5</b> Evaluation Framework</a></li>
+<li class="part"><span><b>Part II Climate Change Caused by Human Activity</b></span></li>
+<li class="chapter" data-level="6" data-path="use-case.html"><a href="use-case.html"><i class="fa fa-check"></i><b>6</b> Use Case</a><ul>
+<li class="chapter" data-level="6.1" data-path="use-case.html"><a href="use-case.html#what-is-climate"><i class="fa fa-check"></i><b>6.1</b> What is Climate?</a></li>
+<li class="chapter" data-level="6.2" data-path="use-case.html"><a href="use-case.html#climate-change"><i class="fa fa-check"></i><b>6.2</b> Climate Change</a></li>
+<li class="chapter" data-level="6.3" data-path="use-case.html"><a href="use-case.html#causes-of-climate-change"><i class="fa fa-check"></i><b>6.3</b> Causes of Climate Change</a></li>
+<li class="chapter" data-level="6.4" data-path="use-case.html"><a href="use-case.html#evaluation-metrics"><i class="fa fa-check"></i><b>6.4</b> Evaluation Metrics</a></li>
+<li class="chapter" data-level="6.5" data-path="use-case.html"><a href="use-case.html#assessment"><i class="fa fa-check"></i><b>6.5</b> Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>7</b> conclusion</a></li>
+<li class="part"><span><b>Part III Warming Stripes</b></span></li>
+<li class="chapter" data-level="8" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>8</b> Introduction</a></li>
+<li class="chapter" data-level="9" data-path="generating-the-visualization.html"><a href="generating-the-visualization.html"><i class="fa fa-check"></i><b>9</b> Generating the visualization</a></li>
+<li class="chapter" data-level="10" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>10</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MSIS 2629 Self-study Project</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">Chapter 8</span> Introduction</h1>
+<p>This project is to produce a warming stripes visualization, first released by Ed Hawkins, a climate scientist in the National Centre for Atmospheric Science (NCAS) at the University of Reading in 2018.</p>
+<p>For this project, we use the data relesed by the UK Met Office. We selected the Tropics (30 deg S to 30 deg N) Annual dataset, which contains a time series presented as temperature anomalies (deg C) that are relative to 1961-1990 for the years 1850 to 2019.</p>
+<p>The dataset consists of 170 records with 12 columns as described below:</p>
+<ol style="list-style-type: decimal">
+<li>Column 1 is the date.</li>
+<li>Column 2 is the median of the 100 ensemble member time series.</li>
+<li>Columns 3 and 4 are the lower and upper bounds of the 95% confidence interval of bias uncertainty computed from the 100 member ensemble.</li>
+<li>Columns 5 and 6 are the lower and upper bounds of the 95% confidence interval of measurement and sampling uncertainties around the ensemble median. These are the combination of fully uncorrelated measurement and sampling uncertainties and partially correlated uncertainties described by the HadCRUT4 error covariance matrices.</li>
+<li>Columns 7 and 8 are the lower and upper bounds of the 95% confidence interval of coverage uncertainties around the ensemble median.</li>
+<li>Columns 9 and 10 are the lower and upper bounds of the 95% confidence interval of the combination of measurement and sampling and bias uncertainties.</li>
+<li>Columns 11 and 12 are the lower and upper bounds of the 95% confidence interval of the combined effects of all the uncertainties described in the HadCRUT4 error model (measurement and sampling, bias and coverage uncertainties).</li>
+</ol>
+<p>The dataset can be downloaded from <a href="https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/time_series/HadCRUT.4.6.0.0.annual_30S_30N.txt">here</a>.<br />
+Information on the dataset format can be found <a href="https://www.metoffice.gov.uk/hadobs/hadcrut4/data/current/ensemble_series_format.html">here</a>.</p>
+<p>More details are given in the <a href="https://www.metoffice.gov.uk/hadobs/hadcrut4/HadCRUT4_accepted.pdf">paper introducing the dataset</a>.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="conclusion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="generating-the-visualization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
